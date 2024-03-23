@@ -7,11 +7,11 @@ description: this class is where all the functions are called
 Return: Null
 """
 
-
+#getting the data from dataset class
 dataframe = Dataset.getDataset()
 class Main:
     # print(dataframe["condition"])
-    LinearRegression.Train(dataframe["condition"],dataframe["price"])
+    LinearRegression.Train(dataframe[["condition"]],dataframe["price"])
 
     
 

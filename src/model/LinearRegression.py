@@ -10,7 +10,7 @@ Return: return_description
 
 class LinearRegression:
 
-    reg = linear_model.LinearRegression()
+
 
     """LinearRegression
     
@@ -19,12 +19,12 @@ class LinearRegression:
     Return: @array
     """
 
-    def Train(self,train_x,train_y):
-        self.reg.fit([train_x],train_y)
+    def Train(train_x,train_y):
+        reg = linear_model.LinearRegression()
+      
+        reg.fit(train_x,train_y)
         print("data is trained successfully")
         
-
-
 
 """LinearRegression
     
