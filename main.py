@@ -1,5 +1,5 @@
 from src.model.LinearRegression import*
-from src.data_cleaning import dataCleaning
+from src.data_cleaning.dataCleaning import Dataset
 
 """Main the is the main file to be executed 
 
@@ -8,16 +8,12 @@ Return: Null
 """
 
 
-cleanData = dataCleaning.Datacleaning.cleanData
+dataframe = Dataset.getDataset()
 class Main:
-    LinearRegression.Train(cleanData)
+    # print(dataframe["condition"])
+    LinearRegression.Train(dataframe["condition"],dataframe["price"])
 
     
-
-
-    
-    
-
 
 
    
