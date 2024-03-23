@@ -9,9 +9,14 @@ Return: Null
 
 #getting the data from dataset class
 dataframe = Dataset.getDataset()
+
 class Main:
     # print(dataframe["condition"])
     LinearRegression.Train(dataframe[["condition"]],dataframe["price"])
+
+    #predicting using the model
+
+    LinearRegression.Predict([[5]])
 
     
 
